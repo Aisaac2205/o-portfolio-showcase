@@ -1,73 +1,50 @@
-# Welcome to your Lovable project
+# 🚀 Portafolio de Isaac Sarceño  
 
-## Project info
+![Status](https://img.shields.io/badge/Portfolio-Online-purple?style=for-the-badge&logo=vercel)  
+![Tech](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)  
+![Tech](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)  
+![Tech](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)  
+![Tech](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)  
+![Tech](https://img.shields.io/badge/shadcn/ui-000000?style=for-the-badge&logo=radix-ui&logoColor=white)  
 
-**URL**: https://lovable.dev/projects/24380254-441d-449c-a282-1da5ab5e0671
+---
 
-## How can I edit this code?
+## 🌐 Demo  
+🔗 [Ver mi portafolio en línea](https://lovable.dev/projects/24380254-441d-449c-a282-1da5ab5e0671)  
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 📌 Sobre mí  
+- 🎓 Estudiante de **Ingeniería en Sistemas** (8vo semestre).  
+- 💻 Enfocado en **desarrollo Full Stack**.  
+- 📚 Me gusta aprender y aplicar tecnologías modernas para resolver problemas reales.  
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/24380254-441d-449c-a282-1da5ab5e0671) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🛠️ Tecnologías utilizadas  
 
-**Use your preferred IDE**
+<p align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="50" alt="React"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="50" alt="TypeScript"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vite/vite-original.svg" width="50" alt="Vite"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" width="50" alt="TailwindCSS"/>
+</p>
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 📂 Proyectos destacados  
+- 🌟 **Aplicaciones web interactivas**  
+- 📊 **Herramientas para visualización de datos**  
+- 🛒 **E-commerce con carrito de compras**  
+- ⚙️ **Proyectos académicos y prácticos**  
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 📫 Contacto  
+<p align="left">
+  <a href="mailto:isaac.flores.dev@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+  <a href="https://github.com/Aisaac2205"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/></a>
+  <a href="https://www.linkedin.com/in/isaac-flores/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+</p>  
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/24380254-441d-449c-a282-1da5ab5e0671) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+---
