@@ -51,16 +51,18 @@ const About = () => {
               <div className="flex items-center gap-6 mb-8">
                 <div className="relative">
                   <div className="w-32 h-32 rounded-full bg-gradient-primary p-1">
-                    <div className="w-full h-full rounded-full bg-background flex items-center justify-center">
-                      <div className="w-28 h-28 rounded-full bg-gradient-subtle flex items-center justify-center text-4xl font-bold text-primary">
-                        IS
-                      </div>
+                    <div className="w-full h-full rounded-full bg-background flex items-center justify-center overflow-hidden">
+                      <img 
+                        src="/profile.jpg" 
+                        alt="Isaac Sarceño" 
+                        className="w-28 h-28 rounded-full object-cover"
+                      />
                     </div>
                   </div>
                 </div>
                 <div>
                   <h3 className="text-2xl font-semibold mb-2">Isaac Sarceño</h3>
-                  <p className="text-primary font-medium">Desarrollador Frontend</p>
+                  <p className="text-primary font-medium">Full stack jr</p>
                 </div>
               </div>
               
@@ -68,13 +70,13 @@ const About = () => {
                 Mi historia y estudios
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                Soy un desarrollador Frontend apasionado por crear experiencias digitales excepcionales. 
-                Mi formación en ingeniería y mi constante aprendizaje me han permitido especializarme 
-                en tecnologías modernas como React, TypeScript y desarrollo web responsive.
+                Soy un desarrollador Full Stack en proceso de aprendizaje, apasionado por crear experiencias digitales excepcionales. 
+                Mi formación actual en ingeniería y mi constante aprendizaje me han permitido especializarme 
+                en tecnologías modernas como JavaScript, TypeScript, Node.js y desarrollo web responsive.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 Durante mis estudios universitarios, descubrí mi amor por el código y la creación 
-                de interfaces intuitivas. He completado múltiples cursos especializados y mantengo 
+                de aplicaciones web completas. He completado múltiples cursos especializados y mantengo 
                 una actitud de aprendizaje continuo en este campo en constante evolución.
               </p>
             </motion.div>
@@ -91,11 +93,11 @@ const About = () => {
                   <div className="p-3 bg-primary/10 rounded-lg">
                     <Code className="h-6 w-6 text-primary" />
                   </div>
-                  <h4 className="text-lg font-semibold">Desarrollo Frontend</h4>
+                  <h4 className="text-lg font-semibold">Desarrollo Full Stack</h4>
                 </div>
                 <p className="text-muted-foreground">
-                  Especializado en crear interfaces modernas, responsivas y accesibles 
-                  que ofrecen experiencias de usuario excepcionales.
+                  Especializado en crear aplicaciones web completas, desde el frontend hasta el backend, 
+                  que ofrecen experiencias de usuario excepcionales y funcionalidades robustas.
                 </p>
               </div>
 

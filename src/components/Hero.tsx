@@ -115,7 +115,7 @@ const Hero = () => {
             transition={{ duration: 0.6 }}
           >
             <span className="inline-block px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-6">
-              👋 ¡Hola! Soy desarrollador Frontend
+              👋 ¡Hola! Soy Full stack jr
             </span>
           </motion.div>
           
@@ -134,7 +134,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Especializado en <span className="text-primary font-semibold">React</span> y tecnologías modernas. 
+            Especializado en <span className="text-primary font-semibold">tecnologías modernas</span> y desarrollo web completo. 
             Creo experiencias web excepcionales que combinan diseño elegante con funcionalidad robusta.
           </motion.p>
           

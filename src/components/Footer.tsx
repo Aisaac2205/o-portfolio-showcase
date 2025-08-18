@@ -12,8 +12,8 @@ const Footer = () => {
             <div className="space-y-4">
               <h3 className="text-xl font-bold text-gradient">Isaac Sarceño</h3>
               <p className="text-muted-foreground">
-                Desarrollador Frontend especializado en crear experiencias web excepcionales 
-                con React y tecnologías modernas.
+                Desarrollador Full Stack especializado en crear experiencias web excepcionales 
+                con tecnologías modernas y desarrollo web completo.
               </p>
             </div>
 
