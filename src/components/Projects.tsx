@@ -56,19 +56,19 @@ const Projects = () => {
           </div>
 
           <div className="flex justify-center">
-            <div className="max-w-4xl w-full">
+            <div className="max-w-4xl w-full mx-4 md:mx-0">
               {projects.map((project) => (
                 <div 
                   key={project.id}
                   className="glass-card rounded-2xl overflow-hidden group glow-on-hover"
                 >
                   {/* Galería de imágenes */}
-                  <div className="grid md:grid-cols-2 gap-4 p-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 p-4 md:p-6">
                     <div className="relative">
                       <img
                         src={project.image}
                         alt={`Screenshot del proyecto ${project.title}`}
-                        className="w-full h-64 object-cover rounded-xl transition-transform duration-300 group-hover:scale-105"
+                        className="w-full h-48 md:h-64 object-cover rounded-xl transition-transform duration-300 group-hover:scale-105"
                         loading="lazy"
                       />
                       <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-xl">
@@ -89,7 +89,7 @@ const Projects = () => {
                         <img
                           src={project.image2}
                           alt={`Screenshot adicional del proyecto ${project.title}`}
-                          className="w-full h-64 object-cover rounded-xl transition-transform duration-300 group-hover:scale-105"
+                          className="w-full h-48 md:h-64 object-cover rounded-xl transition-transform duration-300 group-hover:scale-105"
                           loading="lazy"
                         />
                         <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-xl">
@@ -107,30 +107,30 @@ const Projects = () => {
                     )}
                   </div>
 
-                  <div className="px-6 pb-6">
-                    <h3 className="text-2xl font-semibold mb-4 group-hover:text-primary transition-colors">
+                  <div className="px-4 md:px-6 pb-4 md:pb-6">
+                    <h3 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4 group-hover:text-primary transition-colors text-center md:text-left">
                       {project.title}
                     </h3>
-                    <p className="text-muted-foreground mb-6 leading-relaxed text-lg">
+                    <p className="text-muted-foreground mb-4 md:mb-6 leading-relaxed text-sm md:text-lg text-center md:text-left">
                       {project.description}
                     </p>
                     
-                    <div className="flex flex-wrap gap-2 mb-8">
+                    <div className="flex flex-wrap gap-2 mb-6 md:mb-8 justify-center md:justify-start">
                       {project.tags.map((tag) => (
                         <span 
                           key={tag}
-                          className="px-3 py-1 bg-primary/10 border border-primary/20 rounded-full text-sm text-primary font-medium"
+                          className="px-2 md:px-3 py-1 bg-primary/10 border border-primary/20 rounded-full text-xs md:text-sm text-primary font-medium"
                         >
                           {tag}
                         </span>
                       ))}
                     </div>
 
-                    <div className="flex gap-4">
+                    <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
                       <Button 
                         variant="outline" 
-                        size="lg" 
-                        className="flex-1"
+                        size="sm" 
+                        className="flex-1 text-sm"
                         asChild
                       >
                         <a 
@@ -139,14 +139,14 @@ const Projects = () => {
                           rel="noopener noreferrer"
                           aria-label={`Ver código fuente de ${project.title} en GitHub`}
                         >
-                          <Github className="h-5 w-5 mr-2" />
+                          <Github className="h-4 w-4 mr-2" />
                           Ver Código
                         </a>
                       </Button>
                       <Button 
                         variant="default" 
-                        size="lg" 
-                        className="flex-1"
+                        size="sm" 
+                        className="flex-1 text-sm"
                         asChild
                       >
                         <a 
@@ -155,7 +155,7 @@ const Projects = () => {
                           rel="noopener noreferrer"
                           aria-label={`Ver demo en vivo de ${project.title}`}
                         >
-                          <ExternalLink className="h-5 w-5 mr-2" />
+                          <ExternalLink className="h-4 w-4 mr-2" />
                           Ver Demo
                         </a>
                       </Button>
