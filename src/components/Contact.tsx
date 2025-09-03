@@ -4,6 +4,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Mail, MapPin, Phone } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { FORMSPREE_CONFIG, getFormspreeEndpoint } from '@/config/formspree';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -49,34 +50,64 @@ const Contact = () => {
       return;
     }
 
+    // Validación de longitud del mensaje
+    if (formData.message.length < 10) {
+      toast({
+        title: "Mensaje muy corto",
+        description: "Por favor, escribe al menos 10 caracteres en tu mensaje.",
+        variant: "destructive",
+      });
+      setIsSubmitting(false);
+      return;
+    }
+
     try {
-      // Simular envío del formulario
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Usar Formspree
+      const response = await fetch(getFormspreeEndpoint(), {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject || FORMSPREE_CONFIG.settings.subject,
+          message: formData.message,
+          _replyto: formData.email, // Para que puedas responder directamente
+          _subject: `Nuevo mensaje de ${formData.name} - ${formData.subject || 'Contacto desde portfolio'}`,
+        }),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "¡Mensaje enviado!",
+          description: "Gracias por contactarme. Te responderé pronto.",
+        });
+
+        // Limpiar formulario
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+      } else {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Error al enviar mensaje');
+      }
+    } catch (error) {
+      console.error('Error al enviar email:', error);
       
-      // Crear enlace mailto como fallback
-      const mailtoLink = `mailto:isaac@example.com?subject=${encodeURIComponent(formData.subject || 'Contacto desde portfolio')}&body=${encodeURIComponent(
+      // Fallback: usar mailto si Formspree falla
+      const mailtoLink = `mailto:isaac.flores.dev@gmail.com?subject=${encodeURIComponent(formData.subject || 'Contacto desde portfolio')}&body=${encodeURIComponent(
         `Nombre: ${formData.name}\nEmail: ${formData.email}\n\nMensaje:\n${formData.message}`
       )}`;
       
       window.location.href = mailtoLink;
 
       toast({
-        title: "¡Mensaje enviado!",
-        description: "Gracias por contactarme. Te responderé pronto.",
-      });
-
-      // Limpiar formulario
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
-    } catch (error) {
-      toast({
-        title: "Error al enviar",
-        description: "Hubo un problema al enviar el mensaje. Inténtalo de nuevo.",
-        variant: "destructive",
+        title: "Redirigiendo a email",
+        description: "Se abrirá tu cliente de email para enviar el mensaje.",
       });
     } finally {
       setIsSubmitting(false);
@@ -115,10 +146,10 @@ const Contact = () => {
                   <div>
                     <h4 className="font-medium">Email</h4>
                     <a 
-                      href="mailto:isaac@example.com"
+                      href="mailto:isaac.flores.dev@gmail.com"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      isaac@example.com
+                      isaac.flores.dev@gmail.com
                     </a>
                   </div>
                 </div>
@@ -151,7 +182,7 @@ const Contact = () => {
                   className="w-full sm:w-auto"
                   asChild
                 >
-                  <a href="mailto:isaac@example.com">
+                  <a href="mailto:isaac.flores.dev@gmail.com">
                     <Mail className="mr-2 h-4 w-4" />
                     Enviar email directo
                   </a>
@@ -176,7 +207,7 @@ const Contact = () => {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      placeholder="Tu nombre"
+                      placeholder="Isaac Sarceño"
                       className="bg-background/50"
                     />
                   </div>
@@ -191,7 +222,7 @@ const Contact = () => {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      placeholder="tu@email.com"
+                      placeholder="isaac.flores.dev@gmail.com"
                       className="bg-background/50"
                     />
                   </div>
@@ -235,7 +266,14 @@ const Contact = () => {
                   className="w-full"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? 'Enviando...' : 'Enviar mensaje'}
+                  {isSubmitting ? (
+                    <div className="flex items-center gap-2">
+                      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                      Enviando mensaje...
+                    </div>
+                  ) : (
+                    'Enviar mensaje'
+                  )}
                 </Button>
               </form>
             </div>

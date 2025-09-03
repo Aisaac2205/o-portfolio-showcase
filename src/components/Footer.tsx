@@ -47,7 +47,7 @@ const Footer = () => {
               <h4 className="font-semibold">Conecta conmigo</h4>
               <div className="flex gap-4">
                 <a
-                  href="https://github.com"
+                  href="https://github.com/Aisaac2205"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-lg bg-card/50 border border-border/50 hover:bg-card transition-all duration-300 glow-on-hover"
@@ -56,7 +56,7 @@ const Footer = () => {
                   <Github className="h-5 w-5" />
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/isaac-flores/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-lg bg-card/50 border border-border/50 hover:bg-card transition-all duration-300 glow-on-hover"
@@ -65,7 +65,7 @@ const Footer = () => {
                   <Linkedin className="h-5 w-5" />
                 </a>
                 <a
-                  href="mailto:isaac@example.com"
+                  href="mailto:isaac.flores.dev@gmail.com"
                   className="p-3 rounded-lg bg-card/50 border border-border/50 hover:bg-card transition-all duration-300 glow-on-hover"
                   aria-label="Email de Isaac Sarceño"
                 >
@@ -75,7 +75,7 @@ const Footer = () => {
               <p className="text-sm text-muted-foreground">
                 ¿Tienes un proyecto en mente? <br />
                 <a 
-                  href="mailto:isaac@example.com" 
+                  href="mailto:isaac.flores.dev@gmail.com" 
                   className="text-primary hover:underline"
                 >
                   ¡Hablemos!
@@ -89,9 +89,6 @@ const Footer = () => {
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
               <p className="text-sm text-muted-foreground">
                 © {currentYear} Isaac Sarceño. Todos los derechos reservados.
-              </p>
-              <p className="text-sm text-muted-foreground flex items-center gap-1">
-                Hecho con <Heart className="h-4 w-4 text-red-500 fill-current" /> en Guatemala
               </p>
             </div>
           </div>

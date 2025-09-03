@@ -10,7 +10,7 @@ import {
   SiTypescript, 
   SiGit, 
   SiGithub, 
-  SiAmazon 
+  SiExpress, 
 } from 'react-icons/si';
 
 const About = () => {
@@ -62,7 +62,7 @@ const About = () => {
                 </div>
                 <div>
                   <h3 className="text-2xl font-semibold mb-2">Isaac Sarceño</h3>
-                  <p className="text-primary font-medium">Full stack jr</p>
+                  <p className="text-primary font-medium">Full Stack Jr</p>
                 </div>
               </div>
               
@@ -152,22 +152,22 @@ const About = () => {
               </p>
             </motion.div>
             
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
               {[
-                { name: 'JavaScript', Icon: SiJavascript, color: '#F7DF1E' },
-                { name: 'HTML5', Icon: SiHtml5, color: '#E34F26' },
-                { name: 'CSS3', Icon: SiCss3, color: '#1572B6' },
-                { name: 'Bootstrap', Icon: SiBootstrap, color: '#7952B3' },
-                { name: 'Node.js', Icon: SiNodedotjs, color: '#339933' },
-                { name: 'React', Icon: SiReact, color: '#61DAFB' },
-                { name: 'TypeScript', Icon: SiTypescript, color: '#3178C6' },
-                { name: 'Git', Icon: SiGit, color: '#F05032' },
-                { name: 'GitHub', Icon: SiGithub, color: '#181717' },
-                { name: 'AWS', Icon: SiAmazon, color: '#FF9900' },
+                { name: 'JavaScript', Icon: SiJavascript, color: '#F7DF1E', bgColor: 'transparent' },
+                { name: 'HTML5', Icon: SiHtml5, color: '#E34F26', bgColor: 'transparent' },
+                { name: 'CSS3', Icon: SiCss3, color: '#1572B6', bgColor: 'transparent' },
+                { name: 'Bootstrap', Icon: SiBootstrap, color: '#7952B3', bgColor: 'transparent' },
+                { name: 'Node.js', Icon: SiNodedotjs, color: '#339933', bgColor: 'transparent' },
+                { name: 'React', Icon: SiReact, color: '#61DAFB', bgColor: 'transparent' },
+                { name: 'TypeScript', Icon: SiTypescript, color: '#3178C6', bgColor: 'transparent' },
+                { name: 'Git', Icon: SiGit, color: '#F05032', bgColor: 'transparent' },
+                { name: 'GitHub', Icon: SiGithub, color: '#ffffff', bgColor: '#000000' },
+                { name: 'Express', Icon: SiExpress, color: '#ffffff', bgColor: '#000000' },
               ].map((tech, index) => (
                 <motion.div 
                   key={tech.name}
-                  className="group flex flex-col items-center space-y-3"
+                  className="group flex flex-col items-center space-y-3 w-full"
                   initial={{ opacity: 0, y: 50, scale: 0.8 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{ 
@@ -180,17 +180,18 @@ const About = () => {
                   viewport={{ once: true }}
                 >
                   <motion.div 
-                    className="relative p-4 rounded-2xl bg-card/50 border border-border/50 backdrop-blur-sm shadow-lg transition-all duration-300 group-hover:shadow-xl"
+                    className="relative w-16 h-16 rounded-2xl border border-border/50 backdrop-blur-sm shadow-lg transition-all duration-300 group-hover:shadow-xl flex items-center justify-center"
                     whileHover={{ 
                       rotate: [0, -10, 10, 0],
                       transition: { duration: 0.5 }
                     }}
                     style={{
                       '--tech-color': tech.color,
+                      backgroundColor: tech.bgColor === 'transparent' ? 'rgba(255, 255, 255, 0.05)' : tech.bgColor,
                     } as React.CSSProperties}
                   >
                     <tech.Icon 
-                      className="text-4xl transition-all duration-300 group-hover:scale-110" 
+                      className="text-3xl transition-all duration-300 group-hover:scale-110 flex-shrink-0" 
                       style={{ color: tech.color }}
                     />
                     <motion.div 

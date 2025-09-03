@@ -115,7 +115,7 @@ const Hero = () => {
             transition={{ duration: 0.6 }}
           >
             <span className="inline-block px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-6">
-              👋 ¡Hola! Soy Full stack jr
+              👋 ¡Hola! Soy Full Stack Developer
             </span>
           </motion.div>
           
@@ -191,7 +191,7 @@ const Hero = () => {
               <Github className="h-5 w-5" />
             </motion.a>
             <motion.a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/isaac-flores-aa2850374"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-card/50 border border-border/50 backdrop-blur-sm hover:bg-card transition-all duration-300 glow-on-hover"
