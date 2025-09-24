@@ -10,7 +10,7 @@ import {
   SiTypescript, 
   SiGit, 
   SiGithub, 
-  SiExpress, 
+  SiNestjs, 
 } from 'react-icons/si';
 
 const About = () => {
@@ -62,7 +62,7 @@ const About = () => {
                 </div>
                 <div>
                   <h3 className="text-2xl font-semibold mb-2">Isaac Sarceño</h3>
-                  <p className="text-primary font-medium">Full Stack Jr</p>
+                  <p className="text-primary font-medium">Full Stack</p>
                 </div>
               </div>
               
@@ -70,13 +70,13 @@ const About = () => {
                 Mi historia y estudios
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                Soy un desarrollador Full Stack en proceso de aprendizaje, apasionado por crear experiencias digitales excepcionales. 
+                Soy un desarrollador Full Stack, apasionado por crear experiencias digitales excepcionales. 
                 Mi formación actual en ingeniería y mi constante aprendizaje me han permitido especializarme 
                 en tecnologías modernas como JavaScript, TypeScript, Node.js y desarrollo web responsive.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Durante mis estudios universitarios, descubrí mi amor por el código y la creación 
-                de aplicaciones web completas. He completado múltiples cursos especializados y mantengo 
+                Durante mis estudios universitarios, descubrí mi pasión por el código y la creación 
+                de aplicaciones web completas. He completado cursos especializados y mantengo 
                 una actitud de aprendizaje continuo en este campo en constante evolución.
               </p>
             </motion.div>
@@ -163,7 +163,7 @@ const About = () => {
                 { name: 'TypeScript', Icon: SiTypescript, color: '#3178C6', bgColor: 'transparent' },
                 { name: 'Git', Icon: SiGit, color: '#F05032', bgColor: 'transparent' },
                 { name: 'GitHub', Icon: SiGithub, color: '#ffffff', bgColor: '#000000' },
-                { name: 'Express', Icon: SiExpress, color: '#ffffff', bgColor: '#000000' },
+                { name: 'NestJS', Icon: SiNestjs, color: '#E0234E', bgColor: '#000000' },
               ].map((tech, index) => (
                 <motion.div 
                   key={tech.name}

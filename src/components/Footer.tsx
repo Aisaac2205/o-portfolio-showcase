@@ -56,7 +56,7 @@ const Footer = () => {
                   <Github className="h-5 w-5" />
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/isaac-flores/"
+                  href="https://www.linkedin.com/in/isaac-sarce%C3%B1o-aa2850374?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-lg bg-card/50 border border-border/50 hover:bg-card transition-all duration-300 glow-on-hover"
